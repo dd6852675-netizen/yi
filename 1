@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width,
+initial-scale=1,
+maximum-scale=1,
+user-scalable=no,
+viewport-fit=cover">
+
+<meta name="theme-color" content="#fff7fa">
+
+<title>给罗慧君的一封信 ♡</title>
+
+<style>
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+*{
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:transparent;
+}
+
+html,
+body{
+    margin:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+body{
+    font-family:
+    "PingFang SC",
+    "Hiragino Sans GB",
+    "Noto Sans CJK SC",
+    sans-serif;
+
+    color:#685d69;
+
+    background:
+    linear-gradient(
+        135deg,
+        #fffafc,
+        #faf5fb
+    );
+}
+
+
+/* =====================================================
+   BACKGROUND
+===================================================== */
+
+.background{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+
+    background:
+    radial-gradient(
+        circle at 15% 15%,
+        rgba(255,214,228,.85),
+        transparent 28%
+    ),
+    radial-gradient(
+        circle at 87% 82%,
+        rgba(222,211,250,.85),
+        transparent 30%
+    ),
+    radial-gradient(
+        circle at 50% 45%,
+        rgba(255,244,223,.45),
+        transparent 38%
+    );
+
+    z-index:0;
+}
+
+
+/* 柔光球 */
+
+.glow{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(55px);
+    opacity:.45;
+    pointer-events:none;
+}
+
+.glow.one{
+    width:260px;
+    height:260px;
+    left:-100px;
+    top:5%;
+    background:#ffd4e2;
+}
+
+.glow.two{
+    width:280px;
+    height:280px;
+    right:-120px;
+    bottom:0;
+    background:#ded2ff;
+}
+
+.glow.three{
+    width:180px;
+    height:180px;
+    left:45%;
+    top:38%;
+    background:#fff0ca;
+}
+
+
+/* =====================================================
+   PARTICLES
+===================================================== */
+
+#particles{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+}
+
+.particle{
+    position:absolute;
+    opacity:0;
+    animation:
+        particleFloat linear infinite;
+}
+
+@keyframes particleFloat{
+
+    0%{
+        opacity:0;
+        transform:
+        translateY(30px)
+        scale(.7)
+        rotate(0deg);
+    }
+
+    15%{
+        opacity:.65;
+    }
+
+    50%{
+        opacity:.9;
+        transform:
+        translateY(-30px)
+        scale(1)
+        rotate(10deg);
+    }
+
+    85%{
+        opacity:.5;
+    }
+
+    100%{
+        opacity:0;
+        transform:
+        translateY(-100px)
+        scale(.65)
+        rotate(-8deg);
+    }
+}
+
+
+/* =====================================================
+   SCREEN
+===================================================== */
+
+.screen{
+    position:relative;
+
+    width:100%;
+    height:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:
+    max(22px, env(safe-area-inset-top))
+    max(22px, env(safe-area-inset-right))
+    max(22px, env(safe-area-inset-bottom))
+    max(22px, env(safe-area-inset-left));
+
+    z-index:2;
+}
+
+
+/* =====================================================
+   MAIN CARD
+===================================================== */
+
+.card{
+    position:relative;
+
+    width:min(92vw,470px);
+
+    padding:
+    40px
+    28px
+    34px;
+
+    border-radius:34px;
+
+    border:
+    1px solid
+    rgba(255,255,255,.9);
+
+    background:
+    rgba(255,255,255,.64);
+
+    backdrop-filter:
+    blur(28px);
+
+    -webkit-backdrop-filter:
+    blur(28px);
+
+    box-shadow:
+    0 30px 90px
+    rgba(105,78,105,.14),
+
+    inset 0 1px 0
+    rgba(255,255,255,.9);
+
+    text-align:center;
+
+    overflow:hidden;
+}
+
+
+/* 卡片顶部光线 */
+
+.card::before{
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+    height:180px;
+
+    left:50%;
+    top:-130px;
+
+    transform:translateX(-50%);
+
+    background:#fff;
+
+    filter:blur(35px);
+
+    opacity:.7;
+}
+
+
+/* =====================================================
+   DECORATIONS
+===================================================== */
+
+.decoration{
+    position:absolute;
+
+    font-size:23px;
+
+    opacity:.78;
+
+    animation:
+    decorationFloat
+    6s ease-in-out infinite;
+}
+
+.decoration.a{
+    left:7%;
+    top:13%;
+}
+
+.decoration.b{
+    right:8%;
+    top:18%;
+
+    animation-delay:1s;
+}
+
+.decoration.c{
+    left:8%;
+    bottom:15%;
+
+    animation-delay:2s;
+}
+
+.decoration.d{
+    right:8%;
+    bottom:13%;
+
+    animation-delay:.7s;
+}
+
+@keyframes decorationFloat{
+
+    50%{
+        transform:
+        translateY(-12px)
+        rotate(7deg);
+    }
+}
+
+
+/* =====================================================
+   LOGIN PAGE
+===================================================== */
+
+.ornament{
+    font-size:25px;
+
+    letter-spacing:9px;
+
+    color:#a98ca1;
+
+    margin-bottom:14px;
+}
+
+.eyebrow{
+    font-size:10px;
+
+    letter-spacing:5px;
+
+    color:#b095a8;
+
+    margin-bottom:14px;
+}
+
+.title{
+    margin:0;
+
+    color:#6d5a6b;
+
+    font-size:27px;
+
+    font-weight:500;
+
+    letter-spacing:1px;
+}
+
+.subtitle{
+    margin:
+    12px
+    0
+    26px;
+
+    font-size:13px;
+
+    line-height:2;
+
+    color:#a0929d;
+}
+
+
+/* =====================================================
+   INPUT
+===================================================== */
+
+.inputBox{
+    position:relative;
+}
+
+.nameInput{
+
+    width:100%;
+
+    height:57px;
+
+    border:
+    1px solid
+    #eadde7;
+
+    border-radius:19px;
+
+    outline:none;
+
+    background:
+    rgba(255,255,255,.78);
+
+    color:#665b68;
+
+    text-align:center;
+
+    font-family:inherit;
+
+    font-size:16px;
+
+    letter-spacing:2px;
+
+    transition:
+    .3s;
+}
+
+.nameInput::placeholder{
+    color:#c1b4bd;
+}
+
+.nameInput:focus{
+
+    border-color:#d8bfd1;
+
+    box-shadow:
+    0 0 0 5px
+    rgba(220,197,215,.18);
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.openButton{
+
+    width:100%;
+
+    height:55px;
+
+    margin-top:14px;
+
+    border:0;
+
+    border-radius:19px;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-family:inherit;
+
+    font-size:14px;
+
+    letter-spacing:3px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #d9bfd1,
+        #c7b7df
+    );
+
+    box-shadow:
+    0 12px 30px
+    rgba(145,113,151,.18);
+
+    transition:
+    transform .2s,
+    box-shadow .2s;
+}
+
+.openButton:active{
+
+    transform:
+    scale(.975);
+
+    box-shadow:
+    0 7px 18px
+    rgba(145,113,151,.14);
+}
+
+
+/* =====================================================
+   HINT
+===================================================== */
+
+.hint{
+
+    min-height:22px;
+
+    margin-top:11px;
+
+    font-size:12px;
+
+    color:#b28d9e;
+
+    transition:.3s;
+}
+
+
+/* =====================================================
+   ENVELOPE TRANSITION
+===================================================== */
+
+#envelopeTransition{
+
+    position:fixed;
+
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    background:
+    linear-gradient(
+        135deg,
+        #fff8fa,
+        #f7f1fb
+    );
+
+    z-index:50;
+
+    opacity:0;
+}
+
+.envelope{
+
+    position:relative;
+
+    width:260px;
+    height:170px;
+
+    background:#fff;
+
+    border-radius:10px;
+
+    box-shadow:
+    0 25px 70px
+    rgba(100,70,100,.18);
+
+    transform:
+    scale(.75);
+
+    animation:
+    envelopeOpen
+    1.8s
+    ease
+    forwards;
+}
+
+.envelope::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:0;
+    height:0;
+
+    border-left:
+    130px solid transparent;
+
+    border-right:
+    130px solid transparent;
+
+    border-top:
+    90px solid #f3dfe9;
+
+    transform-origin:
+    top center;
+
+    animation:
+    flap
+    1.4s
+    .25s
+    ease
+    forwards;
+}
+
+.envelope::after{
+
+    content:"♡";
+
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    transform:
+    translate(-50%,-50%);
+
+    font-size:31px;
+
+    color:#c69bb2;
+
+    opacity:0;
+
+    animation:
+    heartAppear
+    .7s
+    1s
+    forwards;
+}
+
+@keyframes envelopeOpen{
+
+    0%{
+        opacity:0;
+        transform:scale(.75);
+    }
+
+    30%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+@keyframes flap{
+
+    to{
+        transform:
+        rotateX(180deg);
+    }
+}
+
+@keyframes heartAppear{
+
+    to{
+        opacity:1;
+    }
+}
+
+
+/* =====================================================
+   LETTER PAGE
+===================================================== */
+
+#letterPage{
+    display:none;
+
+    opacity:0;
+
+    animation:
+    pageAppear
+    1.5s
+    ease
+    forwards;
+}
+
+@keyframes pageAppear{
+
+    to{
+        opacity:1;
+    }
+}
+
+.letterCard{
+
+    max-height:
+    min(84vh,760px);
+
+    overflow-y:auto;
+
+    text-align:left;
+
+    padding:
+    40px
+    28px
+    35px;
+}
+
+.letterCard::-webkit-scrollbar{
+    display:none;
+}
+
+
+/* =====================================================
+   LETTER HEADER
+===================================================== */
+
+.letterTop{
+
+    text-align:center;
+
+    margin-bottom:25px;
+}
+
+.letterTiny{
+
+    font-size:10px;
+
+    letter-spacing:5px;
+
+    color:#b196a9;
+
+    margin-bottom:10px;
+}
+
+.letterTitle{
+
+    font-family:
+    "Noto Serif SC",
+    "Songti SC",
+    serif;
+
+    font-size:25px;
+
+    font-weight:500;
+
+    color:#705d6f;
+
+    margin:0;
+}
+
+.letterLine{
+
+    width:55px;
+
+    height:1px;
+
+    margin:15px auto 0;
+
+    background:#d9c3d2;
+}
+
+
+/* =====================================================
+   LETTER TEXT
+===================================================== */
+
+#letterText{
+
+    font-family:
+    "PingFang SC",
+    "Hiragino Sans GB",
+    "Noto Serif SC",
+    serif;
+
+    font-size:16px;
+
+    line-height:2.25;
+
+    color:#665d67;
+}
+
+.paragraph{
+
+    margin:
+    0
+    0
+    22px;
+
+    opacity:0;
+
+    transform:
+    translateY(18px);
+
+    filter:blur(3px);
+
+    animation:
+    paragraphAppear
+    2.2s
+    cubic-bezier(.2,.7,.2,1)
+    forwards;
+}
+
+@keyframes paragraphAppear{
+
+    to{
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+        filter:blur(0);
+    }
+}
+
+
+/* =====================================================
+   SIGNATURE
+===================================================== */
+
+.signature{
+
+    margin-top:28px;
+
+    padding-top:20px;
+
+    border-top:
+    1px solid
+    rgba(205,185,202,.45);
+
+    text-align:right;
+
+    color:#a28599;
+
+    font-size:13px;
+
+    line-height:1.9;
+
+    opacity:0;
+
+    animation:
+    signatureAppear
+    2s
+    1s
+    forwards;
+}
+
+@keyframes signatureAppear{
+
+    to{
+        opacity:1;
+    }
+}
+
+
+/* =====================================================
+   MUSIC
+===================================================== */
+
+.musicButton{
+
+    position:fixed;
+
+    right:18px;
+
+    top:18px;
+
+    width:45px;
+    height:45px;
+
+    border-radius:50%;
+
+    border:
+    1px solid
+    rgba(255,255,255,.9);
+
+    background:
+    rgba(255,255,255,.72);
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:
+    0 10px 30px
+    rgba(100,70,100,.12);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    font-size:17px;
+
+    color:#90758d;
+
+    cursor:pointer;
+
+    z-index:20;
+}
+
+
+/* =====================================================
+   ERROR SHAKE
+===================================================== */
+
+.shake{
+
+    animation:
+    shake
+    .35s
+    ease;
+}
+
+@keyframes shake{
+
+    0%,100%{
+        transform:translateX(0);
+    }
+
+    25%{
+        transform:translateX(-7px);
+    }
+
+    75%{
+        transform:translateX(7px);
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:480px){
+
+    .card{
+
+        width:
+        calc(100vw - 38px);
+
+        padding:
+        34px
+        22px
+        30px;
+
+        border-radius:30px;
+    }
+
+    .title{
+        font-size:24px;
+    }
+
+    .subtitle{
+        font-size:12px;
+    }
+
+    #letterText{
+        font-size:15.5px;
+        line-height:2.15;
+    }
+
+    .letterCard{
+        max-height:82vh;
+        padding:
+        34px
+        23px
+        30px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     BACKGROUND
+===================================================== -->
+
+<div class="background">
+
+    <div class="glow one"></div>
+    <div class="glow two"></div>
+    <div class="glow three"></div>
+
+    <div id="particles"></div>
+
+</div>
+
+
+<!-- =====================================================
+     LOGIN PAGE
+===================================================== -->
+
+<section
+    id="loginPage"
+    class="screen"
+>
+
+    <div class="decoration a">🎀</div>
+    <div class="decoration b">🪽</div>
+    <div class="decoration c">✦</div>
+    <div class="decoration d">🌷</div>
+
+
+    <div class="card">
+
+        <div class="ornament">
+            ♡　✦　♡
+        </div>
+
+        <div class="eyebrow">
+            A LITTLE LETTER FOR YOU
+        </div>
+
+        <h1 class="title">
+            一份只属于你的祝福
+        </h1>
+
+        <div class="subtitle">
+
+            有一封信藏在这里。<br>
+
+            写下那个专属的名字，<br>
+
+            让它慢慢为你打开。
+
+        </div>
+
+
+        <div class="inputBox">
+
+            <input
+                id="nameInput"
+                class="nameInput"
+                type="text"
+                autocomplete="off"
+                placeholder="输入专属姓名"
+            >
+
+        </div>
+
+
+        <button
+            class="openButton"
+            onclick="unlockLetter()"
+        >
+            轻轻打开这份心意
+        </button>
+
+
+        <div
+            id="hint"
+            class="hint"
+        >
+            这扇门，只为一个人打开 ♡
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ENVELOPE TRANSITION
+===================================================== -->
+
+<div id="envelopeTransition">
+
+    <div class="envelope"></div>
+
+</div>
+
+
+
+<!-- =====================================================
+     LETTER PAGE
+===================================================== -->
+
+<section
+    id="letterPage"
+    class="screen"
+>
+
+    <div class="card letterCard">
+
+        <div class="letterTop">
+
+            <div class="letterTiny">
+                TO · MY DEAR FRIEND
+            </div>
+
+            <h2 class="letterTitle">
+                给罗慧君的一封信
+            </h2>
+
+            <div class="letterLine"></div>
+
+        </div>
+
+
+        <div id="letterText"></div>
+
+
+        <div class="signature">
+
+            愿你一路有花、有光、有温柔。<br>
+
+            也愿我们很久很久以后，<br>
+
+            依然记得彼此。♡
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MUSIC BUTTON
+===================================================== -->
+
+<div
+    id="musicButton"
+    class="musicButton"
+    onclick="toggleMusic()"
+>
+    ♫
+</div>
+
+
+<!--
+
+音乐：
+
+如果你拥有合法授权的音频文件，
+可以将它命名为：
+
+music.mp3
+
+并与 index.html 放在同一个文件夹。
+
+然后取消下面代码的注释：
+
+<audio
+    id="music"
+    src="music.mp3"
+    loop
+></audio>
+
+注意：
+浏览器通常会阻止网页未经用户操作自动播放声音，
+所以第一次进入后可能需要点击右上角音乐按钮。
+
+-->
+
+<!--
+<audio id="music" src="music.mp3" loop></audio>
+-->
+
+
+
+<script>
+
+/* =====================================================
+   FLOATING PARTICLES
+===================================================== */
+
+const particleBox =
+document.getElementById("particles");
+
+const symbols = [
+    "♡",
+    "✦",
+    "✧",
+    "·",
+    "❀",
+    "🌸"
+];
+
+for(let i=0;i<28;i++){
+
+    const p =
+    document.createElement("span");
+
+    p.className="particle";
+
+    p.textContent =
+    symbols[
+        Math.floor(
+            Math.random()*symbols.length
+        )
+    ];
+
+    p.style.left =
+    Math.random()*100+"%";
+
+    p.style.top =
+    Math.random()*100+"%";
+
+    p.style.fontSize =
+    (9+Math.random()*12)+"px";
+
+    p.style.animationDuration =
+    (5+Math.random()*7)+"s";
+
+    p.style.animationDelay =
+    (Math.random()*7)+"s";
+
+    particleBox.appendChild(p);
+}
+
+
+/* =====================================================
+   BLESSING TEXT
+===================================================== */
+
+const paragraphs = [
+
+"有些人出现在生命里，没有盛大的开场，也没有刻意安排的剧本，却会在一天天平凡的相处里，悄悄变成很珍贵的存在。很幸运，我们的故事里，有这样一份恰到好处的遇见。",
+
+"愿你以后的日子，不必急着成为别人眼里所谓完美的样子。开心的时候，就尽情地笑；难过的时候，也允许自己慢一点。你可以有自己的节奏，可以偶尔迷茫，也可以在累的时候好好休息，然后重新出发。",
+
+"愿我们的友谊，不需要靠时时刻刻的热闹来证明。即使后来我们走向不同的城市，遇见不同的人，拥有完全不同的生活，再次想起彼此的时候，心里依然会有一个很柔软的位置——那里放着一段很好的时光，也放着一个很珍惜的朋友。",
+
+"愿你遇见的人都真诚，走过的路都有意义，努力过的事情都有回应。愿那些现在还藏在心里的小小愿望，在未来某一天，都变成一句轻轻的：你看，我真的做到了。",
+
+"如果青春是一封很长很长的信，那么我希望，我们都曾在彼此的那一页留下过温柔的字迹。多年以后再翻开，也许已经记不起每一个细节，却一定会记得，曾经有一个人，让那段岁月变得更加明亮。",
+
+"罗慧君，愿你一直拥有被爱和被理解的底气，也永远保留一点可爱、一点天真，以及面对生活时那份属于自己的勇气。愿未来的你，自由、平安、快乐；愿你走过很远很远的路以后，回头看见曾经的自己，依然会觉得那是一个值得被好好珍惜的女孩。",
+
+"而我也希望，我们可以把这份友谊放在时间里慢慢收藏。不必每天联系，不必时时陪伴，却始终知道——如果有一天再见，我们还是可以像从前一样笑起来。",
+
+"愿我们都成为更好的自己，也愿很多年以后，我们依然可以笑着说一句：好久不见。你还是那个，我很珍惜的朋友。♡"
+
+];
+
+
+/* =====================================================
+   UNLOCK
+===================================================== */
+
+function unlockLetter(){
+
+    const input =
+    document.getElementById("nameInput");
+
+    const hint =
+    document.getElementById("hint");
+
+    const name =
+    input.value.trim();
+
+
+    /* 错误 */
+
+    if(name !== "罗慧君"){
+
+        hint.textContent =
+        "好像不是这份祝福的主人呢，再试一次吧 ♡";
+
+        input.classList.remove("shake");
+
+        void input.offsetWidth;
+
+        input.classList.add("shake");
+
+        return;
+    }
+
+
+    /* 正确 */
+
+    hint.textContent =
+    "名字正确，正在为你打开 ♡";
+
+
+    const login =
+    document.getElementById("loginPage");
+
+    const transition =
+    document.getElementById(
+        "envelopeTransition"
+    );
+
+
+    login.style.transition =
+    "opacity 1s ease, transform 1s ease";
+
+    login.style.opacity="0";
+
+    login.style.transform=
+    "scale(.96)";
+
+
+    setTimeout(()=>{
+
+        login.style.display="none";
+
+        transition.style.display="flex";
+
+        requestAnimationFrame(()=>{
+
+            transition.style.transition =
+            "opacity .5s ease";
+
+            transition.style.opacity="1";
+
+        });
+
+    },800);
+
+
+    setTimeout(()=>{
+
+        transition.style.transition =
+        "opacity 1s ease";
+
+        transition.style.opacity="0";
+
+
+        setTimeout(()=>{
+
+            transition.style.display="none";
+
+            const letter =
+            document.getElementById(
+                "letterPage"
+            );
+
+            letter.style.display="flex";
+
+            document
+            .getElementById("musicButton")
+            .style.display="flex";
+
+            showBlessing();
+
+            tryPlayMusic();
+
+        },1000);
+
+    },2500);
+
+}
+
+
+/* =====================================================
+   SHOW BLESSING
+===================================================== */
+
+function showBlessing(){
+
+    const box =
+    document.getElementById(
+        "letterText"
+    );
+
+    paragraphs.forEach(
+        (text,index)=>{
+
+            setTimeout(()=>{
+
+                const p =
+                document.createElement("p");
+
+                p.className =
+                "paragraph";
+
+                p.textContent =
+                text;
+
+                box.appendChild(p);
+
+            },index*3000);
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   ENTER KEY
+===================================================== */
+
+document
+.getElementById("nameInput")
+.addEventListener(
+    "keydown",
+    function(event){
+
+        if(event.key==="Enter"){
+
+            unlockLetter();
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   MUSIC
+===================================================== */
+
+function tryPlayMusic(){
+
+    const audio =
+    document.getElementById("music");
+
+    if(!audio) return;
+
+    audio.volume=.55;
+
+    audio.play().catch(()=>{});
+
+}
+
+
+function toggleMusic(){
+
+    const audio =
+    document.getElementById("music");
+
+    if(!audio){
+
+        alert(
+        "请添加你拥有合法授权的 music.mp3 文件 🎵"
+        );
+
+        return;
+    }
+
+
+    if(audio.paused){
+
+        audio.play();
+
+        document
+        .getElementById("musicButton")
+        .textContent="♫";
+
+    }else{
+
+        audio.pause();
+
+        document
+        .getElementById("musicButton")
+        .textContent="Ⅱ";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
